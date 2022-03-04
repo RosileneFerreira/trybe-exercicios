@@ -1,0 +1,49 @@
+ol {
+    background-color: yellow;
+}
+ol li:nth-child(even) {
+    color: green;
+}
+ol li:nth-child(odd) {
+    text-transform:uppercase;
+}
+.header {
+    color: red;
+}
+h1.header {
+    font-size: 40px;
+    border: 1px solid black;
+}
+.fonte {
+    font-size: 20px;
+}
+ol.fonte {
+    font-weight: bold;
+}
+.cor li:first-of-type {
+    color: blue;
+}
+.cor .java {
+    color: blue;
+    background-color: pink;
+}
+ul li a:hover {
+    font-weight: bold;
+    color: red;
+}
+/* Outra opção da linha 23 até linha 29:
+ul.cor :nth-child(1) {
+    color: blue;
+}
+ul.cor :nth-child(2) {
+    color: blue;
+}
+ul.cor :nth-child(3) {
+    color: blue;
+}
+<li><span>Java</span></li>
+<li><span>JavaScript</span></li>
+ul li span {
+    background-color: pink;
+}
+*/
