@@ -1,0 +1,29 @@
+div:hover {
+    border-style: solid;
+    border-width: 5px;
+  }
+  
+  div:first-of-type {
+    border-color: red;
+  }
+  div:nth-of-type(2) {
+    border-color: purple;
+  }
+  div:nth-of-type(3) {
+    border-color: yellow;
+    padding: 3em;
+  }
+  div:nth-of-type(4) {
+    border-color: black;
+  }
+  div:last-of-type {
+    border-color:pink;
+  }
+  body div h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+  }
+  body div:nth-child(odd) {
+    font-style: italic;
+    text-decoration: underline;
+}

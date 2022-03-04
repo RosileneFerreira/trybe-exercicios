@@ -1,0 +1,13 @@
+h1, p {
+    text-align: center;
+}
+li:hover {
+    background-color: yellowgreen;
+}
+li:active {
+    font-family: sans-serif;
+    color: white;
+}
+ol, ul {
+    list-style: none;
+}
