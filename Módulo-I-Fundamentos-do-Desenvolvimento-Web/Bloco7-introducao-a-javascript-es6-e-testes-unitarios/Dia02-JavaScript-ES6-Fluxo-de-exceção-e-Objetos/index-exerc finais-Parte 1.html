@@ -1,3 +1,5 @@
+<!-- Crie um erro personalizado que será chamado se a pessoa usuária digitar apenas um número. -->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -16,6 +18,9 @@
     <p id="result"></p>
     <script>
       const verifyIsNumber = (value1, value2) => {
+        if (isNaN(value1) || isNaN(value2)) {
+        throw new Error('Informe apenas números para realizar a soma');
+      }
         if (!value1 || !value2) {
           throw new Error("Informe os dois valores para realizar a soma!");
         }
@@ -46,3 +51,8 @@
     </script>
   </body>
 </html>
+
+<!-- Agora adicione uma outra exceção, caso a pessoa usuária digite um valor que não seja numérico.
+Você pode fazer essa verificação utilizando a função isNan() . Resposta: Inseridas as linhas
+21, 22 e 23.-->
+
