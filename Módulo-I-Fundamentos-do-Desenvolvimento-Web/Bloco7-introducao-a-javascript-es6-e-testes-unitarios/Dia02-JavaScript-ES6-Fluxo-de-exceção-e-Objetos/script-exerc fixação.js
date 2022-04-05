@@ -60,10 +60,10 @@ console.log(sum(2, '3')); */
  o objeto já com a nova chave adicionada nele. */
 
 
-/* const recebeTres = (objeto, name, nome) => {
-    let newKey = 'name';
-    const name = 'Rosilene';
-    objeto[newKey] = name;
+/* const recebeTres = (objeto, chave, valor) => {
+const meuNome = new Object();
+meuNome.nome = 'Rosilene';
+console.log(meuNome);
 }; */
 
 /*   const recebeTres = (estudante) => {
