@@ -33,14 +33,17 @@
           verifyIsNumber(value1, value2);
           const result = parseInt(value1) + parseInt(value2);
           document.getElementById("result").innerHTML = `Resultado: ${result}`;
-          document.getElementById("value1").value = "";
-          document.getElementById("value2").value = "";
+/*           document.getElementById("value1").value = "";
+          document.getElementById("value2").value = ""; */
         } catch (error) {
           document.getElementById(
             "result"
           ).innerHTML = `Erro: ${error.message}`;
-          document.getElementById("value1").value = "";
-          document.getElementById("value2").value = "";
+/*           document.getElementById("value1").value = "";
+          document.getElementById("value2").value = ""; */
+        } finally {
+        document.getElementById('value1').value = '';
+        document.getElementById('value2').value = '';
         }
       }
 
@@ -56,3 +59,6 @@
 Você pode fazer essa verificação utilizando a função isNan() . Resposta: Inseridas as linhas
 21, 22 e 23.-->
 
+<!-- Você se lembrou de limpar os inputs após o clique do botão? Teve que repetir código para
+isso? Que tal refatorar sua função utilizando o finally ? Resposta: linhas 36, 37, 42 e 43
+comentadas. Incluídas as linhas 44 à 47.-->
