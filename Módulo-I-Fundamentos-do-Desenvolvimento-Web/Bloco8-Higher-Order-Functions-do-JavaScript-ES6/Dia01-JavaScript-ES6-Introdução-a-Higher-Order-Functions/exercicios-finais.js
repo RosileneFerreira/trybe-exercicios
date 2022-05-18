@@ -29,18 +29,13 @@ aleatório entre 1 e 5 recebendo como parâmetros o número apostado e uma funç
 número apostado é igual ao número sorteado. O retorno da sua HOF deve ser uma string
 (Ex: "Tente novamente" ou "Parabéns você ganhou"). */
 
-/* const resultadoSorteio = (numeroApostado, checaAposta) => {
+/* const checaAposta = (numeroApostado, numeroSorteado) => numeroApostado === numeroSorteado;
+
+const resultadoSorteio = (numeroApostado, checaAposta) => {
   const numeroSorteado = Math.floor(Math.random() * 5) + 1;
   console.log(numeroSorteado);
-
-  if (numeroApostado === numeroSorteado) {
-    return "Parabéns você ganhou";
-  }
-  return "Tente novamente";
-};
-
-const checaAposta = (numeroApostado, numeroSorteado) => {
-  return true;
+  return checaAposta(numeroApostado, numeroSorteado) ? `Parabéns você ganhou` 
+  : `Tente novamente`;
 };
 
 console.log(resultadoSorteio(5, checaAposta)); */
@@ -83,12 +78,12 @@ Você irá criar funções que calculam dano, atualizam status, e ao final, reto
 da rodada.
 Para os próximos exercícios copie o código abaixo. */
 
-/* const mage = {
+const mage = {
   healthPoints: 130,
   intelligence: 45,
   mana: 125,
   damage: undefined,
-}; */
+};
 
 const warrior = {
   healthPoints: 200,
@@ -186,8 +181,8 @@ caso o mago tenha menos de 15 de mana o valor de dano recebe uma mensagem
   }
 }
 
-console.log(gastoMago()); */
-
+console.log(gastoMago());
+ */
 
 /* const mage = {
   healthPoints: 130,
@@ -210,6 +205,29 @@ const mageAttack = (mage) => {
     const damage = Math.floor((Math.random() * (maxDmg - minDmg + 1)) + minDmg);
     const manaSpent = 15;
 
+    turnStats.damageDealt = mageDamage;
+    return turnStats;
+  }
+  return turnStats;
+};
+
+console.log(mageAttack()); */
+
+// GABARITO: obs.: a resposta original não funcionou.
+// Funcionou depois que tirei as constantes mageMana e minDmg para fora da função
+
+/* const mageMana = mage.mana;
+const minDmg = mage.intelligence;
+const mageAttack = (mage) => {
+  const maxDmg = minDmg * 2;
+  const turnStats = {
+    manaSpent: 0,
+    damageDealt: 'Not enough mana...',
+  };
+
+  if (mageMana > 15) {
+    const mageDamage = Math.floor((Math.random() * (maxDmg - minDmg + 1)) + minDmg);
+    turnStats.manaSpent = 15;
     turnStats.damageDealt = mageDamage;
     return turnStats;
   }

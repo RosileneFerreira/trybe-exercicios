@@ -55,14 +55,14 @@ Vamos praticar com os seguintes exercícios:
 4 - Agora desenvolva uma HOF chamada doingThings e configure esta função para que imprima no 
 console o resultado da execução das funções que você criou nos exemplos anteriores. */
 
-const acordar = () => 'Acordando!!';
+/* const acordar = () => 'Acordando!!';
 const cafe = () => 'Bora tomar café!!';
 const dormir = () => 'Partiu dormir!!';
 
 const doingThings = (frase) => frase();
 console.log(doingThings(acordar));
 console.log(doingThings(cafe));
-console.log(doingThings(dormir));
+console.log(doingThings(dormir)); */
 
 
 /*   **********************************************************
@@ -121,3 +121,66 @@ const fruitSalad = (fruit, additional) => {
 
 console.log(fruitSalad(specialFruit, additionalItens)); */
 
+/* *************************************
+const numbers = [19, 21, 30, 3, 45, 22, 15];
+
+const findDivisibleBy3And5 = (number) => number % 3 === 0 && number % 5 === 0;
+
+const mult = numbers.find(findDivisibleBy3And5);
+
+console.log(mult);
+
+console.log(findDivisibleBy3And5(15)) */
+
+/* const names = ['João', 'Irene', 'Fernando', 'Maria'];
+
+const findNameWithFiveLetters = (name) => name.lenght = 5;
+
+const cinco = names.find(findNameWithFiveLetters);
+
+console.log(cinco);
+
+console.log(findNameWithFiveLetters('Joana')); */
+
+/* const musicas = [
+  { id: '31031685', title: 'Partita in C moll BWV 997' },
+  { id: '31031686', title: 'Toccata and Fugue, BWV 565' },
+  { id: '31031687', title: 'Chaconne, Partita No. 2 BWV 1004' },
+]
+
+function findMusic(id) {
+  const escolhida = musicas.find((musica) => musica.id === id);
+  return escolhida;
+}
+
+console.log(findMusic('31031685')) */
+
+/* const names = ['Mateus', 'José', 'Ana', 'Cláudia', 'Bruna'];
+
+const hasName = (arr, name) => arr.some((nome) => nome === name);
+
+console.log(hasName(names, 'Ana')) */
+
+/* const people = [
+  { name: 'Mateus', age: 18 },
+  { name: 'José', age: 16 },
+  { name: 'Ana', age: 23 },
+  { name: 'Cláudia', age: 20 },
+  { name: 'Bruna', age: 19 },
+];
+
+const verifyAges = (arr, minimumAge) => arr.every((person) => person.age >= minimumAge);
+
+console.log(verifyAges(people, 18)); */
+
+/* const people = [
+  { name: 'Mateus', age: 18 },
+  { name: 'José', age: 16 },
+  { name: 'Ana', age: 23 },
+  { name: 'Cláudia', age: 20 },
+  { name: 'Bruna', age: 19 },
+];
+
+people.sort((a, b) => a.age - b.age );
+
+console.log(people); */

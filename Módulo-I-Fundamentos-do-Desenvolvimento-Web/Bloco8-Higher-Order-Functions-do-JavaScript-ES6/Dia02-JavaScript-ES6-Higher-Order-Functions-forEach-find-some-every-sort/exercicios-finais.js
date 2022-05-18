@@ -102,12 +102,13 @@ console.log(smallerName()); */
 }
 console.log(getNamedBook()); */
 
+/* ************************************************************************** */
 /* 4 - Ordene os livros por data de lançamento em ordem decrescente. */
 
 /* function booksOrderedByReleaseYearDesc() {
   // escreva aqui seu código
-  return books.sort((bookA, bookB) => bookA.releaseYear - bookB.releaseYear);
-  }
+  return books.sort((a, b) => b.releaseYear - a.releaseYear);
+}
 
 console.log(booksOrderedByReleaseYearDesc()); */
 
@@ -117,6 +118,16 @@ console.log(booksOrderedByReleaseYearDesc()); */
 ou false , caso contrário. */
 
 /* const expectedResult = false; */
+
+/* function everyoneWasBornOnSecXX() {
+  // escreva seu código aqui
+  return books.every(
+    (book) => book.author.birthYear >= 1901 && book.author.birthYear <= 2000);
+}
+
+console.log(everyoneWasBornOnSecXX()); */
+
+//Ou:
 
 /* function everyoneWasBornOnSecXX() {
   // escreva seu código aqui
@@ -136,6 +147,15 @@ caso contrário. */
 
 /* function someBookWasReleaseOnThe80s() {
   // escreva seu código aqui
+  return books.some((book) => book.releaseYear >= 1980 && book.releaseYear < 1990);
+}
+
+console.log(someBookWasReleaseOnThe80s()); */
+
+//Ou:
+
+/* function someBookWasReleaseOnThe80s() {
+  // escreva seu código aqui
   return books.some((book) => book.releaseYear >= 1980 && book.releaseYear <= 1989);
 }
 
@@ -148,6 +168,13 @@ caso contrário. */
 
 /* const expectedResult = false; */
 
+/* function authorUnique() {
+  // escreva seu código aqui
+  return books.some((book, index) => book.author.birthYear === book.author.birthYear[index]);
+}
+
+console.log(authorUnique()); */
+
 /* function authorUnique(array, sameYear) {
   // escreva seu código aqui
   return books.every((currentYear) => currentYear.author.birthYear === currentYear.author.sameYear)
@@ -157,11 +184,11 @@ console.log(authorUnique()); */
 
 /* GABARITO: */
 
-function authorUnique() {
+/* function authorUnique() {
   return books.every((book) =>
     !books.some((bookSome) =>
       (bookSome.author.birthYear === book.author.birthYear)
       && (bookSome.author.name !== book.author.name)));
 }
 
-console.log(authorUnique());
+console.log(authorUnique()); */
