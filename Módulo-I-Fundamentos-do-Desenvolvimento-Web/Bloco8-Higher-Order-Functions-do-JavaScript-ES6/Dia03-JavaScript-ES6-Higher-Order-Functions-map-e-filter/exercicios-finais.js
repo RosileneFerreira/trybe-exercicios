@@ -66,7 +66,7 @@ Dica: Use a função map. */
 
 /* function formatedBookNames() {
     // escreva seu código aqui
-    return books.map((book) => `${book.name} - ${book.genre} - ${book.author.name}`);
+    return books.map ((book) => `${book.name} - ${book.genre} - ${book.author.name}`)
     };
 
     console.log(formatedBookNames()); */
@@ -78,6 +78,21 @@ propriedade author , com o nome da pessoa autora do livro, e uma propriedade age
 pessoa quando o livro foi lançado. O array deve ser ordenado por idade, ou seja, da pessoa mais jovem
 para a mais velha considerando suas idades quando o livro foi lançado.
 Dica: use as funções map , sort. */
+
+/* function nameAndAge() {
+  // escreva seu código aqui
+  
+  const nomeIdade = books.map ((book) => ({
+    age: book.releaseYear - book.author.birthYear,
+    author: book.author.name,
+  }));
+  nomeIdade.sort((a, b) => a.age - b.age);
+  return nomeIdade;
+}
+
+console.log(nameAndAge()); */
+
+/* Ou: */
 
 /* function nameAndAge() {
     // escreva seu código aqui
@@ -108,9 +123,18 @@ Dica: use a função filter ; */
 
 /*     ------------------------------------------------------------------------------------- */
 
-/*   4 - Crie um array ordenado pelos livros com mais de 60 anos de publicação e ordene-o pelo livro
-mais velho.
+/*   4 - Crie um array ordenado pelos livros com mais de 60 anos de publicação e ordene-o
+pelo livro mais velho.
 Dica: use as funções filter e sort */
+
+/* function oldBooksOrdered() {
+  // escreva seu código aqui
+  return books.filter((book) => book.releaseYear <= 1962).sort(
+    (a, b) => a.releaseYear - b.releaseYear);
+
+}
+
+console.log(oldBooksOrdered()); */
 
 /* function oldBooksOrdered() {
   // escreva seu código aqui
@@ -124,8 +148,8 @@ console.log(oldBooksOrdered()); */
 
 /*     ------------------------------------------------------------------------------------- */
 
-/* 5 - Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção
-científica ou fantasia. */
+/* 5 - Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de 
+ficção científica ou fantasia. */
 
 /* function fantasyOrScienceFictionAuthors() {
     // escreva seu código aqui
@@ -142,6 +166,15 @@ científica ou fantasia. */
 
 /*   6 - Crie um array com o nome de todos os livros com mais de 60 anos de publicação. */
 
+/* function oldBooks() {
+  // escreva seu código aqui
+  return books.filter((book) => book.releaseYear <= 1962).map((book) => book.name);
+}
+
+console.log(oldBooks()); */
+
+//Ou:
+
 /*   function oldBooks() {
     // escreva seu código aqui
     const anoVigente = 2022;
@@ -154,7 +187,8 @@ científica ou fantasia. */
 
 /*     ------------------------------------------------------------------------------------- */
 
-/* 7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais.
+/* 7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três 
+iniciais.
 Dica: cada inicial termina com um ponto. */
 
 /* function authorWith3DotsOnName() {
